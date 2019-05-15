@@ -1,27 +1,15 @@
 import './App.css';
 import React, { Component } from 'react';
-import Clock from 'react-clock';
+import Analog from '/Users/briancurran/myProjects/react-home-dash/src/Analog.js'
+import Time from '/Users/briancurran/myProjects/react-home-dash/src/Time.js'
 
 class App extends Component {
-  state = {
-    date: new Date(),
-  }
-
-  componentDidMount() {
-    setInterval(
-      () => this.setState({ date: new Date() }),
-      1000
-    );
-  }
 
   render() {
     return (
       <div className="Analog">
-        <Clock
-          value={this.state.date} 
-          renderMinuteMarks={this.props=false}
-          renderHourMarks={this.props=false}
-        />
+<Analog/>
+<Time />
       </div>
     );
   }
